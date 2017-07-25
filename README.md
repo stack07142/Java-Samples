@@ -1,7 +1,5 @@
 # Java Samples
 
-
-
 ## ThreadSync
 -Thread간 객체 공유<br />
 -Thread 동기화
@@ -30,6 +28,15 @@
 	- 동기화 블록(synchronized 블록) 내에서만 사용할 수 있다
 	- 보다 효율적인 동기화를 가능하게 한다
 
+## JSONParsing
+-JSON 파일을 읽고 파싱하기<br />
+-JSON file : [github-colors](https://github.com/ozh/github-colors/blob/master/colors.json)<br />
+-Used Library : [json-simple](https://code.google.com/archive/p/json-simple/)
+
+<br />
+<br />
+
+# Design Pattern
 
 ## Strategy Pattern
 -Strategy Pattern : 알고리즘군을 정의하고 각각을 캡슐화하여 교환해서 사용할 수 있도록 만든다. Strategy Pattern을 활용하면 알고리즘을 사용하는 클라이언트와는 독립적으로 알고리즘을 변경할 수 있다.
