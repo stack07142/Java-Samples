@@ -27,12 +27,14 @@
 	- Object에 정의된 메서드이므로 모든 객체에서 호출이 가능하다
 	- 동기화 블록(synchronized 블록) 내에서만 사용할 수 있다
 	- 보다 효율적인 동기화를 가능하게 한다
-<br/>
+<br />
+
 ## JSONParsing
 -JSON 파일을 읽고 파싱하기<br />
 -JSON file : [github-colors](https://github.com/ozh/github-colors/blob/master/colors.json)<br />
 -Used Library : [json-simple](https://code.google.com/archive/p/json-simple/)
 <br />
+
 ## RESTAPI_JSON#2
 - REST API (HttpURLConnection) + GSON Parsing Example
 	- 1. Nested Classes (including Inner Classes) Parsing
