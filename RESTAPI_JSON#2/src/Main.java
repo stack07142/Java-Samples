@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 /**
  * REST API(HttpURLConnection) + GSON Parsing Example
  */
@@ -13,7 +15,7 @@ public class Main {
         System.out.println("|                                                                                        |");
         System.out.println("*----------------------------------------------------------------------------------------*");
 
-        httpClient.setupAPIClient("https://httpbin.org/anything");
+        httpClient.setupGetAPIClient("https://httpbin.org/anything");
         Anything anything = httpClient.getAnything();
 
         System.out.println(anything.toString() + "\n\n");
@@ -25,7 +27,7 @@ public class Main {
         System.out.println("|                                                                                        |");
         System.out.println("*----------------------------------------------------------------------------------------*");
 
-        httpClient.setupAPIClient("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topsongs/limit=25/json");
+        httpClient.setupGetAPIClient("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topsongs/limit=25/json");
         MusicFeed musicFeed = httpClient.getMusicFeed();
 
         System.out.println(musicFeed.toString() + "\n\n");
@@ -37,11 +39,19 @@ public class Main {
         System.out.println("|                                                                                        |");
         System.out.println("*----------------------------------------------------------------------------------------*");
 
-        httpClient.setupAPIClient("https://jsonplaceholder.typicode.com/albums");
+        httpClient.setupGetAPIClient("https://jsonplaceholder.typicode.com/albums");
         Album[] albums = httpClient.getAlbums();
 
         for (Album album : albums) System.out.println(album.toString());
 
+
+        System.out.println("*----------------------------------------------------------------------------------------*");
+        System.out.println("|                                                                                        |");
+        System.out.println("| 4. Send(POST) JSON Data to Server                                                      |");
+        System.out.println("|                                                                                        |");
+        System.out.println("*----------------------------------------------------------------------------------------*");
+
+        httpClient.setupPostAPIClient("https://httpbin.org/post", new Gson().toJson(musicFeed));
     }
 }
 
