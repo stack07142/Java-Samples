@@ -21,12 +21,13 @@ public class Anything {
                 + "origin: " + origin + "\n"
                 + "url: " + url + "\n"
                 + "  headers >> Accept: " + headers.accept + "\n"
-                + "  headers >> Accept: " + headers.acceptEncoding + "\n"
-                + "  headers >> Accept: " + headers.acceptLanguage + "\n"
-                + "  headers >> Accept: " + headers.connection + "\n"
-                + "  headers >> Accept: " + headers.cookie + "\n"
-                + "  headers >> Accept: " + headers.host + "\n"
-                + "  headers >> Accept: " + headers.userAgent + "\n";
+                + "  headers >> Accept-Encoding: " + headers.acceptEncoding + "\n"
+                + "  headers >> Accept-Language: " + headers.acceptLanguage + "\n"
+                + "  headers >> Connection: " + headers.connection + "\n"
+                + "  headers >> Cookie: " + headers.cookie + "\n"
+                + "  headers >> Host: " + headers.host + "\n"
+                + "  headers >> Referer: " + headers.referer + "\n"
+                + "  headers >> User-Agent: " + headers.userAgent + "\n";
     }
 
     class Headers {
@@ -48,6 +49,9 @@ public class Anything {
 
         @SerializedName("Host")
         String host;
+
+        @SerializedName("Referer")
+        String referer;
 
         @SerializedName("User-Agent")
         String userAgent;
