@@ -67,3 +67,6 @@
 ## Dagger_CoffeeMaker
 - DI, Dagger2 Simple Samples
 
+## Dagger_CafeApp
+- DI, Dagger2 Simple Samples
+
